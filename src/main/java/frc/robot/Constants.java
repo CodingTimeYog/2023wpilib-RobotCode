@@ -64,7 +64,7 @@ public final class Constants {
 
     public static final double Backup_Module_Steer_Motor = 1;
     public static final double Backup_Module_Drive_Motor = 10;
-    public static final double Backup_Module_Encoder = 14;
+    public static final double Backup_Module_Encoder = 14
     public static final double Backup_Module_Steer_Offset = 100.00; // FIXME Find offset value;
 
       // Prabhu - Max voltage changed from 12 to 2
