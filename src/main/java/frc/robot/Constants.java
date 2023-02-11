@@ -28,7 +28,12 @@ public final class Constants {
     public static final double kP = 0.03;
     public static final double kI = 0.0;
     public static final double kD = 0.05;
+
+    public static final double kPYaw = 0.01;
+    public static final double kIYaw = 0.02;
+    public static final double kDYaw =0.03;
     
+    public static final double setpoint = 0.00;
     public static final double DRIVETRAIN_WHEELBASE_METERS = 0.6604; // FIXME Measure and set wheelbase
 
     public static final int DRIVETRAIN_PIGEON_ID = 0; // FIXME Set Pigeon ID
@@ -51,12 +56,16 @@ public final class Constants {
     // public static final double BACK_LEFT_MODULE_STEER_OFFSET = -Math.toRadians(229.6); // FIXME Measure and set back left steer offset
     public static final double BACK_LEFT_MODULE_STEER_OFFSET = -Math.toRadians(47.5); // FIXME Measure and set back left steer offset
 
-
     public static final int BACK_RIGHT_MODULE_DRIVE_MOTOR = 5; // FIXME Set back right drive motor ID
     public static final int BACK_RIGHT_MODULE_STEER_MOTOR = 3; // FIXME Set back right steer motor ID
     public static final int BACK_RIGHT_MODULE_STEER_ENCODER = 13; // FIXME Set back right steer encoder ID
     // public static final double BACK_RIGHT_MODULE_STEER_OFFSET = -Math.toRadians(207.4); // FIXME Measure and set back right steer offset
     public static final double BACK_RIGHT_MODULE_STEER_OFFSET = -Math.toRadians(205.8); // FIXME Measure and set back right steer offset
+
+    public static final double Backup_Module_Steer_Motor = 1;
+    public static final double Backup_Module_Drive_Motor = 10;
+    public static final double Backup_Module_Encoder = 14;
+    public static final double Backup_Module_Steer_Offset = 100.00; // FIXME Find offset value;
 
       // Prabhu - Max voltage changed from 12 to 2
     public static double MAX_Voltage=2;
