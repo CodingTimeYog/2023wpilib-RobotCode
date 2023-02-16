@@ -209,6 +209,20 @@ public static final double MAX_VELOCITY_METERS_PER_SECOND = 4000 / 60.0 *
   public void drive(ChassisSpeeds chassisSpeeds) {
     m_chassisSpeeds = chassisSpeeds;
   }
+  public double getBackLeftVelocity(){
+    return m_backLeftModule.getDriveVelocity();
+  }
+  public double getBackRightVelocity(){
+    return m_backRightModule.getDriveVelocity();
+  }
+  public double getFrontRightVelocity()
+  {
+    return m_frontRightModule.getDriveVelocity();
+  }
+  public double getFrontLeftVelocity()
+  {
+    return m_frontLeftModule.getDriveVelocity();
+  }
 
   
   public void drive_pid_x(double pid_output) {
@@ -235,6 +249,15 @@ public static final double MAX_VELOCITY_METERS_PER_SECOND = 4000 / 60.0 *
         
         //m_chassisSpeeds=ChassisSpeeds.fromFieldRelativeSpeeds(DrivetrainSubsystem.MAX_VELOCITY_METERS_PER_SECOND*modified_pid_output, 0,0,this.getGyroscopeRotation() );
         //m_chassisSpeeds=ChassisSpeeds.fromFieldRelativeSpeeds(DrivetrainSubsystem.MAX_VELOCITY_METERS_PER_SECOND*pid_output, 0,0,new Rotation2d());
+      }
+      public void drive_pid_y(double pidOutput2){
+        SmartDashboard.putNumber("getPitch",m_navx.getPitch() );
+        SmartDashboard.putNumber("getRoll",m_navx.getRoll() );
+        SmartDashboard.putNumber("getYaw",m_navx.getYaw() );
+        SmartDashboard.putNumber("pid_output",pidOutput2 );
+        m_chassisSpeeds=new ChassisSpeeds(DrivetrainSubsystem.MAX_VELOCITY_METERS_PER_SECOND*pidOutput2*-1, 0.000001,0);
+        m_chassisSpeeds=new ChassisSpeeds(DrivetrainSubsystem.MAX_VELOCITY_METERS_PER_SECOND*pidOutput2*-1, -0.000001,0);
+
       }
   @Override
   public void periodic() {
