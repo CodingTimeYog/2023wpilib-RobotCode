@@ -7,7 +7,6 @@ package frc.robot.commands;
 import edu.wpi.first.math.kinematics.ChassisSpeeds;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.CommandBase;
-import frc.robot.Constants;
 import frc.robot.subsystems.DrivetrainSubsystem;
 
 
@@ -23,13 +22,12 @@ public class DriveOneDirection extends CommandBase {
   // Called when the command is initially scheduled.
   @Override
   public void initialize() {
-
   }
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    m_drivetrainSubsystem.drive(new ChassisSpeeds(0, 1, 0));
+    m_drivetrainSubsystem.drive(new ChassisSpeeds(1, 0, 0));
     SmartDashboard.putNumber("Front Left Module Velocity", m_drivetrainSubsystem.getFrontLeftVelocity());
     SmartDashboard.putNumber("Front Right Module Velocity", m_drivetrainSubsystem.getFrontRightVelocity());
     SmartDashboard.putNumber("Back Left Module Velocity", m_drivetrainSubsystem.getBackLeftVelocity());
