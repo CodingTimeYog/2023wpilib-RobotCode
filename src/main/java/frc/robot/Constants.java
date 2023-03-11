@@ -29,9 +29,10 @@ public final class Constants {
     public static final double kI = 0.0;
     public static final double kD = 0.05;
 
-    public static final double kPYaw = 0.01;
-    public static final double kIYaw = 0.02;
-    public static final double kDYaw =0.03;
+    // These are the PID constants for the Pitch FIXME Need to be tested and determine the values that give the best result values.
+    public static final double kPPitch = 0.01;
+    public static final double kIPitch = 0.02;
+    public static final double kDPitch =0.03;
     
     public static final double setpoint = 0.00;
     public static final double DRIVETRAIN_WHEELBASE_METERS = 0.6604; // FIXME Measure and set wheelbase
@@ -65,7 +66,7 @@ public final class Constants {
     public static final double Backup_Module_Steer_Motor = 1;
     public static final double Backup_Module_Drive_Motor = 10;
     public static final double Backup_Module_Encoder = 14;
-    public static final double Backup_Module_Steer_Offset = 100.00; // FIXME Find offset value;
+    public static final double Backup_Module_Steer_Offset = 100.00; // FIXME Find offset value for the module through phoenix tuner
     
     
     public static final boolean ifPID = true;
